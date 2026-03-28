@@ -33,7 +33,7 @@
             </plugin>
 
             <!-- Run server locally: mvn compile exec:java -pl server -->
-            <!-- <plugin>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
@@ -42,10 +42,10 @@
                     <includeProjectDependencies>true</includeProjectDependencies>
                     <classpathScope>runtime</classpathScope>
                 </configuration>
-            </plugin> -->
+            </plugin>
 
             <!-- Fat JAR for Railway: mvn package -pl server -->
-            <!-- <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.5.1</version>
@@ -76,6 +76,5 @@
             </plugin>
         </plugins>
     </build>
-</project> 
-  
+</project>
 
