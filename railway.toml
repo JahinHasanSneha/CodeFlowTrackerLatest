@@ -1,0 +1,9 @@
+[build]
+builder = "nixpacks"
+buildCommand = "mvn package -pl server -am -DskipTests"
+
+[deploy]
+startCommand = "java -jar server/target/codeflow-server.jar"
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+restartPolicyType = "on_failure"

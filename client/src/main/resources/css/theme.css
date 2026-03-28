@@ -1,0 +1,235 @@
+/* ============================================================
+   CodeFlow Tracker – Cartoonish Light Theme
+   src/main/resources/css/theme.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+.root {
+    -fx-font-family: 'Quicksand', 'Arial Rounded', sans-serif;
+    -fx-background-color: #F0F9FF;  /* Very light sky blue */
+}
+
+/* ===== Cards & Containers ===== */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 40;
+    -fx-padding: 25;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0, 0, 5);
+    -fx-border-color: #B3E5F0;
+    -fx-border-width: 2;
+    -fx-border-radius: 40;
+}
+
+/* ===== Buttons ===== */
+.button {
+    -fx-background-color: white;
+    -fx-text-fill: #46c1b6;          /* Soft dark teal */
+    -fx-border-color: #7ac5d0;
+    -fx-border-width: 3;
+    -fx-border-radius: 40;
+    -fx-background-radius: 40;
+    -fx-padding: 12 24;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 3);
+}
+
+.button:hover {
+    -fx-background-color: #FFEAA7;    /* Soft yellow */
+    -fx-border-color: #FFB800;
+    -fx-text-fill: #1E5F7A;
+}
+
+.button:pressed {
+    -fx-background-color: #FFD966;
+}
+
+.button.primary {
+    -fx-background-color: #58CC02;    /* Duolingo green */
+    -fx-text-fill: white;
+    -fx-border-color: #3DA000;
+}
+
+.button.primary:hover {
+    -fx-background-color: #6CDA1A;
+}
+
+/* ===== Text Fields ===== */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-text-fill: #1E5F7A;
+    -fx-prompt-text-fill: #A0C4D9;
+    -fx-border-color: #7ac5d0;
+    -fx-border-width: 3;
+    -fx-border-radius: 40;
+    -fx-background-radius: 40;
+    -fx-padding: 12 18;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #58CC02;
+    -fx-effect: dropshadow(gaussian, rgba(88,204,2,0.3), 10, 0, 0, 0);
+}
+
+/* ===== Labels ===== */
+.label {
+    -fx-text-fill: #1E5F7A;
+    -fx-font-size: 14px;
+}
+
+.label.header {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFB800;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+/* ===== Hyperlinks ===== */
+.hyperlink {
+    -fx-text-fill: #58CC02;
+    -fx-border-color: transparent;
+    -fx-underline: false;
+    -fx-font-weight: bold;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #FFB800;
+    -fx-underline: true;
+}
+
+/* ===== Owl Header (for other pages) ===== */
+.owl-header {
+    -fx-background-color: white;
+    -fx-background-radius: 60;
+    -fx-padding: 10 25;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-border-color: #7ac5d0;
+    -fx-border-width: 3;
+    -fx-border-radius: 60;
+}
+
+/* ===== Opening Page Specific ===== */
+.opening-page {
+    -fx-background-color: linear-gradient(to bottom, #F0F9FF, #ab70d3);
+}
+
+.opening-owl {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 10);
+}
+
+.welcome-title {
+    -fx-font-size: 42px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #58CC02;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 3);
+}
+
+.welcome-subtitle {
+    -fx-font-size: 20px;
+    -fx-text-fill: #1E5F7A;
+}
+/* ===== Navigation Bar ===== */
+.nav-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-radius: 60;
+    -fx-padding: 10 20;
+    -fx-spacing: 15;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.nav-button {
+    -fx-background-color: white;
+    -fx-text-fill: #1E5F7A;
+    -fx-border-color: #7ac5d0;
+    -fx-border-width: 2;
+    -fx-border-radius: 40;
+    -fx-background-radius: 40;
+    -fx-padding: 8 20;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 1);
+}
+
+.nav-button:hover {
+    -fx-background-color: #FFEAA7;
+    -fx-border-color: #FFB800;
+}
+
+.nav-button:pressed {
+    -fx-background-color: #FFD966;
+}
+
+.nav-month-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1E5F7A;
+    -fx-padding: 0 15;
+}
+/* ===== Page Titles (Dashboard, Task, Calendar, Progress, LeetCode) ===== */
+.page-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1E5F7A;        /* Your deep teal */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+/* ===== Section Headers (Today's Tasks, Upcoming Projects) ===== */
+.section-header {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1E5F7A;
+    -fx-padding: 0 0 5 0;
+}
+
+/* ===== Chart Titles (Problems Over Time) ===== */
+.chart-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1E5F7A;
+    -fx-padding: 0 0 10 0;
+}
+/* ===== Tab Pane Styling ===== */
+.tab-pane {
+    -fx-tab-min-height: 40;
+    -fx-tab-max-height: 40;
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab-header-area {
+    -fx-padding: 5 0 0 0;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-radius: 40 40 0 0;
+}
+
+.tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-background-radius: 30 30 0 0;
+    -fx-padding: 5 20;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #1E5F7A;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: white;
+    -fx-border-color: #7ac5d0 #7ac5d0 transparent #7ac5d0;
+    -fx-border-width: 2;
+    -fx-border-radius: 30 30 0 0;
+}
+
+.tab-pane .tab:hover {
+    -fx-background-color: #FFEAA7;
+}
+
+.tab .tab-label {
+    -fx-text-fill: #1E5F7A;
+    -fx-font-weight: bold;
+}
