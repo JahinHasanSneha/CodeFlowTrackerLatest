@@ -5,5 +5,5 @@ buildCommand = "mvn package -pl server -am -DskipTests"
 [deploy]
 startCommand = "java -jar server/target/codeflow-server.jar"
 healthcheckPath = "/health"
-healthcheckTimeout = 30
+healthcheckTimeout = 300
 restartPolicyType = "on_failure"
