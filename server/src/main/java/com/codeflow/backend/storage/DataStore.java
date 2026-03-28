@@ -29,7 +29,7 @@ public class DataStore {
             DATA_DIR = railwayDir;
         } else {
             // Try /data first (Railway persistent volume), else local
-            String candidate = "/data/codeflow";
+            String candidate = "/tmp/codeflow";
             File dir = new File(candidate);
             if (dir.exists() || dir.mkdirs()) {
                 DATA_DIR = candidate;
