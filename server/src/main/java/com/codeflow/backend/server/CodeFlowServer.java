@@ -43,9 +43,20 @@ public class CodeFlowServer {
         CourseHandler  course  = new CourseHandler();
         server.createContext("/api/courses",  course);
 
-        // Health check
-        server.createContext("/health", ex -> sendJson(ex, 200, "{\"status\":\"ok\"}"));
-
+               // Health check
+        //  server.createContext("/health", ex -> sendJson(ex, 200, "{\"status\":\"ok\"}"));
+// Health check - Accepts requests from any hostname
+        server.createContext("/health", ex -> {
+            System.out.println("✅ Health check received");
+            ex.getResponseHeaders().set("Access-Control-Allow-Origin", "*");
+            ex.getResponseHeaders().set("Content-Type", "application/json");
+            String response = "{\"status\":\"ok\"}";
+            byte[] bytes = response.getBytes("UTF-8");
+            ex.sendResponseHeaders(200, bytes.length);
+            try (var os = ex.getResponseBody()) {
+                os.write(bytes);
+            }
+        });
         server.start();
         System.out.println("CodeFlow Server started on port " + port);
     }
