@@ -21,7 +21,7 @@ public class CodeFlowServer {
 
         DataStore.init(); // ensure data directories exist
 
-        HttpServer server = HttpServer.create(new InetSocketAddress("0,0,0,0", port), 0);
+        HttpServer server = HttpServer.create(new InetSocketAddress("0.0.0.0", port), 0);
         server.setExecutor(Executors.newCachedThreadPool());
 
         // Register all route handlers
