@@ -1,4 +1,4 @@
-# CodeFlowTrackerLatest
+
 # CodeFlow Tracker
 
 CodeFlow Tracker is a multi-module Java application designed for coding students who want one place to manage study life, coding practice, deadlines, and collaboration.
